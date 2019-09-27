@@ -20,6 +20,7 @@ export class CardTray implements ComponentInterface {
 
   @Method()
   toggleContent() {
+    console.log(this.moreString)
     this.openContent = !this.openContent
   }
 
@@ -34,6 +35,7 @@ export class CardTray implements ComponentInterface {
           [`card-tray-${mode}`]: true
         }}
       >
+        {console.log(this.moreString)}
         <tray-content closed={!this.openContent}><slot></slot></tray-content>
         <toggle-bar onClick={() => {this.toggleContent()}}><ion-icon class="arrow"
         name={this.openContent ? "ios-arrow-up" : "ios-arrow-down"}></ion-icon>
