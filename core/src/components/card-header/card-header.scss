@@ -18,6 +18,13 @@
 
   background: var(--background);
   color: var(--color);
+
+  card-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    line-height: 1.2;
+  }
 }
 
 :host(.ion-color) {

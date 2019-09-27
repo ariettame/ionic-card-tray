@@ -40,7 +40,7 @@ export class CardHeader implements ComponentInterface {
           [mode]: true
         }}
       >
-        <slot></slot>
+        <card-title><slot></slot></card-title>
         <div class="ion-card-separator"></div>
       </Host>
     );

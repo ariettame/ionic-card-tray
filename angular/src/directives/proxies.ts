@@ -152,7 +152,7 @@ export class IonCardToggle {
 proxyInputs(IonCardToggle, ['mode']);
 
 export declare interface IonCardTray extends Components.IonCardTray {}
-@Component({ selector: 'ion-card-tray', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['mode'] })
+@Component({ selector: 'ion-card-tray', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['lessString', 'mode', 'moreString'] })
 export class IonCardTray {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -161,7 +161,7 @@ export class IonCardTray {
   }
 }
 proxyMethods(IonCardTray, ['toggleContent']);
-proxyInputs(IonCardTray, ['mode']);
+proxyInputs(IonCardTray, ['lessString', 'mode', 'moreString']);
 
 export declare interface IonCheckbox extends Components.IonCheckbox {}
 @Component({ selector: 'ion-checkbox', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['checked', 'color', 'disabled', 'indeterminate', 'mode', 'name', 'value'] })

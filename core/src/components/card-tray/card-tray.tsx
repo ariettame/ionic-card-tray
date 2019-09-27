@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, State, Prop, Method } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, State, Method, Prop } from '@stencil/core';
 import { getIonMode } from '../../global/ionic-global';
 
 /**
@@ -13,13 +13,15 @@ import { getIonMode } from '../../global/ionic-global';
 })
 export class CardTray implements ComponentInterface {
   @State() openContent = false;
-  // @Prop({ mutable: true }) openContent: boolean = false;
+
+  @Prop() moreString: string = "View details";
+  @Prop() lessString: string = 'Hide details';
+
 
   @Method()
   toggleContent() {
-    console.log('here')
+    console.log(this.moreString)
     this.openContent = !this.openContent
-    console.log(this.openContent)
   }
 
   render() {
@@ -33,8 +35,11 @@ export class CardTray implements ComponentInterface {
           [`card-tray-${mode}`]: true
         }}
       >
+        {console.log(this.moreString)}
         <tray-content closed={!this.openContent}><slot></slot></tray-content>
-        <toggle-bar onClick={() => {this.toggleContent()}}><ion-icon class="arrow" name={this.openContent ? "ios-arrow-up" : "ios-arrow-down"}></ion-icon><toggle-text>View details</toggle-text></toggle-bar>
+        <toggle-bar onClick={() => {this.toggleContent()}}><ion-icon class="arrow"
+        name={this.openContent ? "ios-arrow-up" : "ios-arrow-down"}></ion-icon>
+        <toggle-text>{this.openContent ? this.lessString : this.moreString}</toggle-text></toggle-bar>
       </Host>
     );
   }

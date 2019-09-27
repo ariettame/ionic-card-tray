@@ -484,10 +484,12 @@ export namespace Components {
     'mode'?: "ios" | "md";
   }
   interface IonCardTray {
+    'lessString': string;
     /**
     * The mode determines which platform styles to use.
     */
     'mode'?: "ios" | "md";
+    'moreString': string;
     'toggleContent': () => Promise<void>;
   }
   interface IonCheckbox {
@@ -4018,10 +4020,12 @@ declare namespace LocalJSX {
     'mode'?: "ios" | "md";
   }
   interface IonCardTray {
+    'lessString'?: string;
     /**
     * The mode determines which platform styles to use.
     */
     'mode'?: "ios" | "md";
+    'moreString'?: string;
   }
   interface IonCheckbox {
     /**
