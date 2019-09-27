@@ -25,6 +25,9 @@ export class Card implements ComponentInterface, AnchorInterface, ButtonInterfac
    */
   @Prop() color?: Color;
 
+  @Prop() green = false;
+  @Prop() gray = true;
+
   /**
    * If `true`, a button tag will be rendered and the card will be tappable.
    */
@@ -114,12 +117,15 @@ export class Card implements ComponentInterface, AnchorInterface, ButtonInterfac
     return (
       <Host
         class={{
-          [mode]: true,
-
           ...createColorClasses(this.color),
+          [mode]: true,
           'card-disabled': this.disabled,
-          'ion-activatable': this.isClickable()
+          'ion-activatable': this.isClickable(),
+          'card-gray': this.gray,
+          'card-green': this.green,
         }}
+        green={this.green}
+        gray={this.gray}
       >
         {this.renderCard(mode)}
       </Host>

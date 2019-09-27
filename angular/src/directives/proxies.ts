@@ -86,7 +86,7 @@ export class IonButtons {
 proxyInputs(IonButtons, ['collapse']);
 
 export declare interface IonCard extends Components.IonCard {}
-@Component({ selector: 'ion-card', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['button', 'color', 'disabled', 'download', 'href', 'mode', 'rel', 'routerDirection', 'target', 'type'] })
+@Component({ selector: 'ion-card', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['button', 'color', 'disabled', 'download', 'gray', 'green', 'href', 'mode', 'rel', 'routerDirection', 'target', 'type'] })
 export class IonCard {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -94,7 +94,7 @@ export class IonCard {
     this.el = r.nativeElement;
   }
 }
-proxyInputs(IonCard, ['button', 'color', 'disabled', 'download', 'href', 'mode', 'rel', 'routerDirection', 'target', 'type']);
+proxyInputs(IonCard, ['button', 'color', 'disabled', 'download', 'gray', 'green', 'href', 'mode', 'rel', 'routerDirection', 'target', 'type']);
 
 export declare interface IonCardContent extends Components.IonCardContent {}
 @Component({ selector: 'ion-card-content', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['mode'] })

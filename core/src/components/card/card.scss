@@ -3,6 +3,14 @@
 // Card
 // --------------------------------------------------
 
+:host(.card-gray) {
+  border-top-color: gray;
+}
+
+:host(.card-green) {
+  border-top-color: green;
+}
+
 :host {
   /**
    * @prop --background: Background of the card
@@ -31,6 +39,7 @@
   vertical-align: top;
   border-top: 8px solid green;
   width: auto;
+
   //dsg
 }
 

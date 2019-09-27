@@ -15,35 +15,23 @@
   </head>
 
   <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Card - Basic</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <ion-card green>
+      <ion-card-header>
+        Card Title
+      </ion-card-header>
 
-      <ion-content id="content">
-        <ion-card>
-          <ion-card-header>
-            Card Title
-          </ion-card-header>
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit
+        clean.
+      </ion-card-content>
 
-          <ion-card-content>
-            Keep close to Nature's heart... and break clear away, once in
-            awhile, and climb a mountain or spend a week in the woods. Wash your
-            spirit clean.
-          </ion-card-content>
-
-          <ion-card-tray moreString="View" lessString="Less details">
-            Tray content.
-          </ion-card-tray>
-        </ion-card>
-      </ion-content>
-    </ion-app>
-    <style>
-      .content {
-        background: #e5e5e5;
-      }
-    </style>
+      <ion-card-tray id="tray" moreString="View" lessString="Less">
+        Tray content.
+      </ion-card-tray>
+    </ion-card>
+    <ion-button onclick="document.getElementById('tray').toggleContent()"
+      >Toggle</ion-button
+    >
   </body>
 </html>

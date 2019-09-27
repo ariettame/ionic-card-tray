@@ -149,7 +149,7 @@ export namespace Components {
     * Create an action sheet overlay with action sheet options.
     * @param options The options to use to create the action sheet.
     */
-    'create': (options: ActionSheetOptions) => Promise<HTMLIonActionSheetElement>;
+    'create': (options: ActionSheetOptions) => Promise<any>;
     /**
     * Dismiss the open action sheet overlay.
     * @param data Any data to emit in the dismiss events.
@@ -160,7 +160,7 @@ export namespace Components {
     /**
     * Get the most recently opened action sheet overlay.
     */
-    'getTop': () => Promise<HTMLIonActionSheetElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonAlert {
     /**
@@ -240,7 +240,7 @@ export namespace Components {
     * Create an alert overlay with alert options.
     * @param options The options to use to create the alert.
     */
-    'create': (options: AlertOptions) => Promise<HTMLIonAlertElement>;
+    'create': (options: AlertOptions) => Promise<any>;
     /**
     * Dismiss the open alert overlay.
     * @param data Any data to emit in the dismiss events.
@@ -251,7 +251,7 @@ export namespace Components {
     /**
     * Get the most recently opened alert overlay.
     */
-    'getTop': () => Promise<HTMLIonAlertElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonAnchor {
     /**
@@ -412,6 +412,8 @@ export namespace Components {
     * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
     */
     'download': string | undefined;
+    'gray': boolean;
+    'green': boolean;
     /**
     * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
     */
@@ -1311,7 +1313,7 @@ export namespace Components {
     * Create a loading overlay with loading options.
     * @param options The options to use to create the loading.
     */
-    'create': (options?: LoadingOptions | undefined) => Promise<HTMLIonLoadingElement>;
+    'create': (options?: LoadingOptions | undefined) => Promise<any>;
     /**
     * Dismiss the open loading overlay.
     * @param data Any data to emit in the dismiss events.
@@ -1322,7 +1324,7 @@ export namespace Components {
     /**
     * Get the most recently opened loading overlay.
     */
-    'getTop': () => Promise<HTMLIonLoadingElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonMenu {
     /**
@@ -1411,20 +1413,20 @@ export namespace Components {
     * @param enable If `true`, the menu should be enabled.
     * @param menu The menuId or side of the menu to enable or disable.
     */
-    'enable': (enable: boolean, menu?: string | null | undefined) => Promise<HTMLIonMenuElement | undefined>;
+    'enable': (enable: boolean, menu?: string | null | undefined) => Promise<any>;
     /**
     * Get a menu instance. If a menu is not provided then it will return the first menu found. If the specified menu is `start` or `end`, then it will return the enabled menu on that side. Otherwise, it will try to find the menu using the menu's `id` property. If a menu is not found then it will return `null`.
     * @param menu The menuId or side of the menu.
     */
-    'get': (menu?: string | null | undefined) => Promise<HTMLIonMenuElement | undefined>;
+    'get': (menu?: string | null | undefined) => Promise<any>;
     /**
     * Get all menu instances.
     */
-    'getMenus': () => Promise<HTMLIonMenuElement[]>;
+    'getMenus': () => Promise<any[]>;
     /**
     * Get the instance of the opened menu. Returns `null` if a menu is not found.
     */
-    'getOpen': () => Promise<HTMLIonMenuElement | undefined>;
+    'getOpen': () => Promise<any>;
     /**
     * Get whether or not a menu is animating. Returns `true` if any menu is currently animating.
     */
@@ -1455,7 +1457,7 @@ export namespace Components {
     * @param enable If `true`, the menu swipe gesture should be enabled.
     * @param menu The menuId or side of the menu to enable or disable the swipe gesture on.
     */
-    'swipeGesture': (enable: boolean, menu?: string | null | undefined) => Promise<HTMLIonMenuElement | undefined>;
+    'swipeGesture': (enable: boolean, menu?: string | null | undefined) => Promise<any>;
     /**
     * Toggle the menu open or closed. If the menu is already open, it will try to close the menu, otherwise it will try to open it. Returns `false` if a menu is not found.
     * @param menu The menuId or side of the menu to toggle.
@@ -1539,7 +1541,7 @@ export namespace Components {
     * Create a modal overlay with modal options.
     * @param options The options to use to create the modal.
     */
-    'create': <T extends ComponentRef>(options: ModalOptions<T>) => Promise<HTMLIonModalElement>;
+    'create': <T extends ComponentRef>(options: ModalOptions<T>) => Promise<any>;
     /**
     * Dismiss the open modal overlay.
     * @param data Any data to emit in the dismiss events.
@@ -1550,7 +1552,7 @@ export namespace Components {
     /**
     * Get the most recently opened modal overlay.
     */
-    'getTop': () => Promise<HTMLIonModalElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonNav {
     /**
@@ -1789,7 +1791,7 @@ export namespace Components {
     * Create a picker overlay with picker options.
     * @param options The options to use to create the picker.
     */
-    'create': (options: PickerOptions) => Promise<HTMLIonPickerElement>;
+    'create': (options: PickerOptions) => Promise<any>;
     /**
     * Dismiss the open picker overlay.
     * @param data Any data to emit in the dismiss events.
@@ -1800,7 +1802,7 @@ export namespace Components {
     /**
     * Get the most recently opened picker overlay.
     */
-    'getTop': () => Promise<HTMLIonPickerElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonPopover {
     /**
@@ -1877,7 +1879,7 @@ export namespace Components {
     * Create a popover overlay with popover options.
     * @param options The options to use to create the popover.
     */
-    'create': <T extends ComponentRef>(options: PopoverOptions<T>) => Promise<HTMLIonPopoverElement>;
+    'create': <T extends ComponentRef>(options: PopoverOptions<T>) => Promise<any>;
     /**
     * Dismiss the open popover overlay.
     * @param data Any data to emit in the dismiss events.
@@ -1888,7 +1890,7 @@ export namespace Components {
     /**
     * Get the most recently opened popover overlay.
     */
-    'getTop': () => Promise<HTMLIonPopoverElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonProgressBar {
     /**
@@ -2609,12 +2611,12 @@ export namespace Components {
     * Get a specific tab by the value of its `tab` property or an element reference.
     * @param tab The tab instance to select. If passed a string, it should be the value of the tab's `tab` property.
     */
-    'getTab': (tab: string | HTMLIonTabElement) => Promise<HTMLIonTabElement | undefined>;
+    'getTab': (tab: any) => Promise<any>;
     /**
     * Select a tab by the value of its `tab` property or an element reference.
     * @param tab The tab instance to select. If passed a string, it should be the value of the tab's `tab` property.
     */
-    'select': (tab: string | HTMLIonTabElement) => Promise<boolean>;
+    'select': (tab: any) => Promise<boolean>;
     'setRouteId': (id: string) => Promise<RouteWrite>;
     'useRouter': boolean;
   }
@@ -2811,7 +2813,7 @@ export namespace Components {
     * Create a toast overlay with toast options.
     * @param options The options to use to create the toast.
     */
-    'create': (options?: ToastOptions | undefined) => Promise<HTMLIonToastElement>;
+    'create': (options?: ToastOptions | undefined) => Promise<any>;
     /**
     * Dismiss the open toast overlay.
     * @param data Any data to emit in the dismiss events.
@@ -2822,7 +2824,7 @@ export namespace Components {
     /**
     * Get the most recently opened toast overlay.
     */
-    'getTop': () => Promise<HTMLIonToastElement | undefined>;
+    'getTop': () => Promise<any>;
   }
   interface IonToggle {
     /**
@@ -3948,6 +3950,8 @@ declare namespace LocalJSX {
     * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
     */
     'download'?: string | undefined;
+    'gray'?: boolean;
+    'green'?: boolean;
     /**
     * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
     */
