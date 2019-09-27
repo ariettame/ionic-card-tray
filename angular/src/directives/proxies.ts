@@ -140,6 +140,29 @@ export class IonCardTitle {
 }
 proxyInputs(IonCardTitle, ['color', 'mode']);
 
+export declare interface IonCardToggle extends Components.IonCardToggle {}
+@Component({ selector: 'ion-card-toggle', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['mode'] })
+export class IonCardToggle {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+proxyInputs(IonCardToggle, ['mode']);
+
+export declare interface IonCardTray extends Components.IonCardTray {}
+@Component({ selector: 'ion-card-tray', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['mode'] })
+export class IonCardTray {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+proxyMethods(IonCardTray, ['toggleContent']);
+proxyInputs(IonCardTray, ['mode']);
+
 export declare interface IonCheckbox extends Components.IonCheckbox {}
 @Component({ selector: 'ion-checkbox', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['checked', 'color', 'disabled', 'indeterminate', 'mode', 'name', 'value'] })
 export class IonCheckbox {

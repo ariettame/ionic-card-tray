@@ -1,0 +1,21 @@
+@import "./card-tray";
+@import "./card-tray.ios.vars";
+
+// iOS Card tray
+// --------------------------------------------------
+
+:host {
+  //   @include padding(
+  //     $card-ios-tray-padding-top,
+  //     $card-ios-tray-padding-end,
+  //     $card-ios-tray-padding-bottom,
+  //     $card-ios-tray-padding-start
+  //   );
+  // }
+
+  // @supports (backdrop-filter: blur(0)) {
+  //   :host(.card-tray-translucent) {
+  //     background-color: $card-ios-tray-translucent-background-color;
+  //     backdrop-filter: $card-ios-tray-translucent-filter;
+  //   }
+}

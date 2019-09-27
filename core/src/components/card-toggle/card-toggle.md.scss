@@ -1,0 +1,19 @@
+@import "./card-toggle";
+@import "./card-toggle.md.vars";
+
+// Material Design Card tray
+// --------------------------------------------------
+
+:host {
+  //   @include padding(
+  //     $card-md-tray-padding-top,
+  //     $card-md-tray-padding-end,
+  //     $card-md-tray-padding-bottom,
+  //     $card-md-tray-padding-start
+  //   );
+  // }
+
+  // ::slotted(ion-card-title:not(:first-child)),
+  // ::slotted(ion-card-subtitle:not(:first-child)) {
+  //   margin-top: 8px;
+}

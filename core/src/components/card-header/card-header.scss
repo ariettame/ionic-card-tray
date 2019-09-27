@@ -4,6 +4,15 @@
 // --------------------------------------------------
 
 :host {
+  //dsg
+  padding: 0 !important;
+  .ion-card-separator {
+    border-top: 1px solid #c7c8c7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  //dsg
   display: block;
   position: relative;
 

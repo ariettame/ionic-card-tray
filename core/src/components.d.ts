@@ -477,6 +477,19 @@ export namespace Components {
     */
     'mode'?: "ios" | "md";
   }
+  interface IonCardToggle {
+    /**
+    * The mode determines which platform styles to use.
+    */
+    'mode'?: "ios" | "md";
+  }
+  interface IonCardTray {
+    /**
+    * The mode determines which platform styles to use.
+    */
+    'mode'?: "ios" | "md";
+    'toggleContent': () => Promise<void>;
+  }
   interface IonCheckbox {
     /**
     * If `true`, the checkbox is selected.
@@ -3019,6 +3032,18 @@ declare global {
     new (): HTMLIonCardTitleElement;
   };
 
+  interface HTMLIonCardToggleElement extends Components.IonCardToggle, HTMLStencilElement {}
+  var HTMLIonCardToggleElement: {
+    prototype: HTMLIonCardToggleElement;
+    new (): HTMLIonCardToggleElement;
+  };
+
+  interface HTMLIonCardTrayElement extends Components.IonCardTray, HTMLStencilElement {}
+  var HTMLIonCardTrayElement: {
+    prototype: HTMLIonCardTrayElement;
+    new (): HTMLIonCardTrayElement;
+  };
+
   interface HTMLIonCheckboxElement extends Components.IonCheckbox, HTMLStencilElement {}
   var HTMLIonCheckboxElement: {
     prototype: HTMLIonCheckboxElement;
@@ -3528,6 +3553,8 @@ declare global {
     'ion-card-header': HTMLIonCardHeaderElement;
     'ion-card-subtitle': HTMLIonCardSubtitleElement;
     'ion-card-title': HTMLIonCardTitleElement;
+    'ion-card-toggle': HTMLIonCardToggleElement;
+    'ion-card-tray': HTMLIonCardTrayElement;
     'ion-checkbox': HTMLIonCheckboxElement;
     'ion-chip': HTMLIonChipElement;
     'ion-col': HTMLIonColElement;
@@ -3979,6 +4006,18 @@ declare namespace LocalJSX {
     * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
     */
     'color'?: Color;
+    /**
+    * The mode determines which platform styles to use.
+    */
+    'mode'?: "ios" | "md";
+  }
+  interface IonCardToggle {
+    /**
+    * The mode determines which platform styles to use.
+    */
+    'mode'?: "ios" | "md";
+  }
+  interface IonCardTray {
     /**
     * The mode determines which platform styles to use.
     */
@@ -6235,6 +6274,8 @@ declare namespace LocalJSX {
     'ion-card-header': IonCardHeader;
     'ion-card-subtitle': IonCardSubtitle;
     'ion-card-title': IonCardTitle;
+    'ion-card-toggle': IonCardToggle;
+    'ion-card-tray': IonCardTray;
     'ion-checkbox': IonCheckbox;
     'ion-chip': IonChip;
     'ion-col': IonCol;
@@ -6343,6 +6384,8 @@ declare module "@stencil/core" {
       'ion-card-header': LocalJSX.IonCardHeader & JSXBase.HTMLAttributes<HTMLIonCardHeaderElement>;
       'ion-card-subtitle': LocalJSX.IonCardSubtitle & JSXBase.HTMLAttributes<HTMLIonCardSubtitleElement>;
       'ion-card-title': LocalJSX.IonCardTitle & JSXBase.HTMLAttributes<HTMLIonCardTitleElement>;
+      'ion-card-toggle': LocalJSX.IonCardToggle & JSXBase.HTMLAttributes<HTMLIonCardToggleElement>;
+      'ion-card-tray': LocalJSX.IonCardTray & JSXBase.HTMLAttributes<HTMLIonCardTrayElement>;
       'ion-checkbox': LocalJSX.IonCheckbox & JSXBase.HTMLAttributes<HTMLIonCheckboxElement>;
       'ion-chip': LocalJSX.IonChip & JSXBase.HTMLAttributes<HTMLIonChipElement>;
       'ion-col': LocalJSX.IonCol & JSXBase.HTMLAttributes<HTMLIonColElement>;

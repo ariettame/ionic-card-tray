@@ -22,6 +22,16 @@
   font-family: $font-family-base;
 
   overflow: hidden;
+
+  //dsg
+  border-top-color: #95c93d;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  position: relative;
+  vertical-align: top;
+  border-top: 8px solid green;
+  width: auto;
+  //dsg
 }
 
 // Card Colors
@@ -51,16 +61,14 @@
   @include margin(0);
 }
 
-
 // Disabled Card
 // --------------------------------------------------
 
 :host(.card-disabled) {
   cursor: default;
-  opacity: .3;
+  opacity: 0.3;
   pointer-events: none;
 }
-
 
 // Native
 // --------------------------------------------------
@@ -90,7 +98,8 @@
   border: 0;
 }
 
-button, a {
+button,
+a {
   cursor: pointer;
   user-select: none;
 
